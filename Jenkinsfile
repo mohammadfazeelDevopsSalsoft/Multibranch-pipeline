@@ -10,6 +10,8 @@ pipeline {
        }
       stage('Deploy Code') {
           steps {
+               sh "./deploy2"
+             
                sh "mkdir /var/lib/jenkins/live/production2"
                sh "cd /var/lib/jenkins/live/production2"
 
