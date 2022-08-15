@@ -17,7 +17,7 @@ pipeline {
                sh   "cd /var/lib/jenkins/live/production2/DemoNodeProject"
                sh " npm install" 
                sh " pm2 start 'node app.js' "
-               sh " echo "Deploying Code"
+               echo "Deploying Code" 
          
           }
       }
