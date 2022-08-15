@@ -10,7 +10,7 @@ pipeline {
        }
       stage('Deploy Code') {
           steps {
-               sh ""./deploy"
+               sh "./deploy"
                echo "Deploying Code"
                """
           }
