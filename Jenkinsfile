@@ -10,15 +10,15 @@ pipeline {
        }
       stage('Deploy Code') {
           steps {
-               sh "mkdir /var/lib/jenkins/live/production/
-               cd /var/lib/jenkins/live/production/
-#mkdir /var/lib/jenkins/live/production/DemoNodeProject
-git clone https://github.com/mohammadfazeelDevopsSalsoft/DemoNodeProject/
-cd /var/lib/jenkins/live/production/DemoNodeProject
-npm install
-pm2 start 'node app.js'"
-               echo "Deploying Code"
-               """
+               sh "mkdir /var/lib/jenkins/live/production"
+               sh "cd /var/lib/jenkins/live/production"
+
+               sh " git clone https://github.com/mohammadfazeelDevopsSalsoft/DemoNodeProject/"
+               sh   "cd /var/lib/jenkins/live/production/DemoNodeProject"
+               sh " npm install" 
+               sh " pm2 start 'node app.js' "
+               sh " echo "Deploying Code"
+         
           }
       }
    }
